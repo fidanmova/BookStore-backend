@@ -31,9 +31,9 @@ app.use("/authors", authorsRouter);
 // 6- main router "/" for homepage
 app.use("/", indexRouter);
 // 404 Page, all other requests, general case
-app.get("*", (req, res) => {
-  res.status(404).render("mainTemplate", { title: 404, content: "404" });
-});
+// app.get("*", (req, res) => {
+//   res.status(404).render("mainTemplate", { title: 404, content: "404" });
+// });
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "public/routes/index.html"));
 });
