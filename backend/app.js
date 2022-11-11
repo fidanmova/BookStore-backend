@@ -34,6 +34,7 @@ app.use("/", indexRouter);
 // app.get("*", (req, res) => {
 //   res.status(404).render("mainTemplate", { title: 404, content: "404" });
 // });
+// For deploying
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "public/routes/index.html"));
 });
